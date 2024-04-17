@@ -1,0 +1,9 @@
+<div id="<%= dom_id compra %>">
+  <tr>
+    <td><%= compra.id %></td>
+    <td><%= compra.fornecedor.nome %></td>
+    <td><%= link_to "Detalhes", compra %></td>
+    <td><%= link_to "Editar", edit_compra_path(compra) %></td>
+    <td><%= button_to "Cancelar", compra, method: :delete, data: { turbo_confirm: "Tem certeza que deseja cancelar a compra #{compra.id}?" } %></td>
+  </tr>
+</div>

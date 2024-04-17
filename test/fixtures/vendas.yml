@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data_saida: 2024-02-15 13:55:02
+  numero_de_parcelas: 1
+  dias_intervalo: 1
+  valor_total: 9.99
+  valor_a_prazo: 9.99
+  valor_a_vista: 9.99
+
+two:
+  data_saida: 2024-02-15 13:55:02
+  numero_de_parcelas: 1
+  dias_intervalo: 1
+  valor_total: 9.99
+  valor_a_prazo: 9.99
+  valor_a_vista: 9.99

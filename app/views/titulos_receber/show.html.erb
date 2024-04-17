@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @titulo_receber %>
+
+<div>
+  <%= link_to "Edit this titulo receber", edit_titulo_receber_path(@titulo_receber) %> |
+  <%= link_to "Back to titulo recebers", titulos_receber_path %>
+
+  <%= button_to "Destroy this titulo receber", @titulo_receber, method: :delete %>
+</div>

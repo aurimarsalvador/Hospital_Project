@@ -1,0 +1,8 @@
+<div id="<%= dom_id cliente %>">
+  <tr>
+    <td><%= cliente.nome %></td>
+    <td><%= cliente.cpf_cnpj %></td>
+    <td><%= link_to "Editar", edit_cliente_path(cliente) %></td>
+    <td><%= button_to "Remover", cliente, method: :delete, data: { turbo_confirm: "Tem certeza que deseja remover o cliente #{cliente.nome}?" } %></td>
+  </tr>
+</div>

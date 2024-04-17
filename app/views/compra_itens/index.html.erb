@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Compra items</h1>
+
+<div id="compra_itens">
+  <% @compra_itens.each do |compra_item| %>
+    <%= render compra_item %>
+    <p>
+      <%= link_to "Show this compra item", compra_item %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New compra item", new_compra_item_path %>

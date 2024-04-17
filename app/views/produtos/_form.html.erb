@@ -1,0 +1,38 @@
+<%= form_with(model: produto) do |form| %>
+  <% if produto.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(produto.errors.count, "erro(s)") %>. Corrija antes de avançar.</h2>
+
+      <ul>
+        <% produto.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <%= form_for @produto do |form| %>
+
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="form-group">
+          <%= form.label :nome %>
+          <%= form.text_field :nome, class:"form-control" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="form-group">
+          <%= form.label :preco_venda %>
+          <%= form.text_field :preco_venda, class:"form-control" %>
+        </div>
+      </div>
+    </div>
+
+    <%= form.submit class:"btn btn-primary" %>
+
+  <% end %>
+
+<% end %>

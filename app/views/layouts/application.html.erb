@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+  
+  <head>
+    <title>G-HOSPINHO</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= javascript_include_tag "jquery" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/#">G-HOSPINHO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/clientes">Clientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/fornecedores">Fornecedores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/produtos">Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/compras">Compras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/vendas">Vendas</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Digite o produto..." aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container">
+      <%= yield %>
+    </div>
+
+  </body>
+</html>
+

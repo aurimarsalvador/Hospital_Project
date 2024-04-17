@@ -1,0 +1,58 @@
+<p style="color: green"><%= notice %></p>
+
+<table class="table table-bordered table-hover" id="vendas">
+  <thead>
+    <tr>
+      <td>Nº NF-e</td>
+      <td>Cliente</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @venda.id %></td>
+      <td><%= @venda.cliente.nome %></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Itens</h3>
+<table class="table table-bordered table-hover" id="vendas">
+  <thead>
+    <tr>
+      <td>Produto</td>
+      <td>Quantidade</td>
+      <td>Valor Unitário</td>
+      <td>Valor Total</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @venda.venda_itens.each do |item| %>
+      <tr>
+        <td><%= item.produto.nome %></td>
+        <td><%= item.quantidade %></td>
+        <td><%= item.valor_unitario %></td>
+        <td><%= item.valor_total %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h3>Dados Gerais</h3>
+
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <td>Valor à Vista: <%= @venda.valor_a_vista %></td>
+      <td>Valor à Prazo: <%= @venda.valor_a_prazo %></td>
+      <td>Valor Total: <%= @venda.valor_total %></td>
+    </tr>
+  </thead>
+</table>
+
+
+<div>
+  <%= link_to "Editar", edit_venda_path(@venda) %> |
+  <%= link_to "Voltar", vendas_path %>
+
+  <%= button_to "Cancelar Venda", @venda, method: :delete %>
+</div>

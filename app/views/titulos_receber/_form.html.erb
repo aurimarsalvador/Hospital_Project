@@ -1,0 +1,32 @@
+<%= form_with(model: titulo_receber) do |form| %>
+  <% if titulo_receber.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(titulo_receber.errors.count, "error") %> prohibited this titulo_receber from being saved:</h2>
+
+      <ul>
+        <% titulo_receber.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :numero_parcela, style: "display: block" %>
+    <%= form.number_field :numero_parcela %>
+  </div>
+
+  <div>
+    <%= form.label :data_vencimento, style: "display: block" %>
+    <%= form.date_field :data_vencimento %>
+  </div>
+
+  <div>
+    <%= form.label :valor_parcela, style: "display: block" %>
+    <%= form.text_field :valor_parcela %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

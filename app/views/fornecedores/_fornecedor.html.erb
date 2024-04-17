@@ -1,0 +1,8 @@
+<div id="<%= dom_id fornecedor %>">
+  <tr>
+    <td><%= fornecedor.nome %></td>
+    <td><%= fornecedor.cpf_cnpj %></td>
+    <td><%= link_to "Editar", edit_fornecedor_path(fornecedor) %></td>
+    <td><%= button_to "Remover", fornecedor, method: :delete, data: { turbo_confirm: "Tem certeza que deseja remover o fornecedor #{fornecedor.nome}?" } %></td>
+  </tr>
+</div>

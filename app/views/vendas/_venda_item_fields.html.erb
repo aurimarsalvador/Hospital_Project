@@ -1,0 +1,37 @@
+<div class="nested-fields">
+
+  <table>
+    <thead>
+      <tr>
+        <td>
+          <div class="field">
+            <div class="form-group">
+              <%= f.label :produto_id, style: "display: block" %>
+              <%= f.collection_select :produto_id, @produtos, :id, :nome %>
+            </div>
+          </div>
+        </td>
+
+        <td>
+          <div class="field">
+            <div class="form-group">
+              <%= f.label :quantidade, style: "display: block"%>
+              <%= f.number_field :quantidade %>
+            </div>
+          </div>
+        </td>
+        
+        <td>
+          <div class="field">
+            <div class="form-group">
+              <%= f.label :valor_unitario, style: "display: block"%>
+              <%= f.number_field :valor_unitario %>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </thead>
+  </table>
+
+  <%= link_to_remove_association "Remover produto", f %>
+</div>

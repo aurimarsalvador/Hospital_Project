@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h3>Cadastro de Produtos</h3>
+
+<%= link_to "Novo Produto", new_produto_path %>
+
+<table class="table table-bordered table-hover" id="produtos">
+  <thead>
+    <tr>
+      <td>Nome</td>
+      <td>Preço de Venda</td>
+      <td>Estoque Atual</td>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @produtos %>
+  </tbody>
+</table>

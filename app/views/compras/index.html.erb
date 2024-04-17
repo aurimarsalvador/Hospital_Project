@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h3>Compras</h3>
+
+<%= link_to "Nova Compra", new_compra_path %>
+
+<table class="table table-bordered table-hover" id="compras">
+  <thead>
+    <tr>
+      <td>Nº NF-e</td>
+      <td>Fornecedor</td>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @compras %>
+  </tbody>
+</table>

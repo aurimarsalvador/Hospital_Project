@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h3>Vendas</h3>
+
+<%= link_to "Nova Venda", new_venda_path %>
+
+<table class="table table-bordered table-hover" id="vendas">
+  <thead>
+    <tr>
+      <td>Nº NF-e</td>
+      <td>Cliente</td>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @vendas %>
+  </tbody>
+</table>

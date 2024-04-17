@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numero_parcela: 1
+  data_vencimento: 2024-01-25
+  valor_parcela: 9.99
+
+two:
+  numero_parcela: 1
+  data_vencimento: 2024-01-25
+  valor_parcela: 9.99

@@ -1,0 +1,9 @@
+<div id="<%= dom_id venda %>">
+  <tr>
+    <td><%= venda.id %></td>
+    <td><%= venda.cliente.nome %></td>
+    <td><%= link_to "Detalhes", venda %></td>
+    <td><%= link_to "Editar", edit_venda_path(venda) %></td>
+    <td><%= button_to "Cancelar", venda, method: :delete, data: { turbo_confirm: "Tem certeza que deseja cancelar a venda #{venda.id}?" } %></td>
+  </tr>
+</div>

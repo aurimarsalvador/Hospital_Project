@@ -1,0 +1,9 @@
+<div id="<%= dom_id produto %>">
+  <tr>
+    <td><%= produto.nome %></td>
+    <td><%= "R$ #{produto.preco_venda}" %></td>
+    <td><%= produto.estoques.blank? == true ? "Não possui estoque" : "#{produto.estoques.last.qtde_estoque} un" %></td>
+    <td><%= link_to "Editar", edit_produto_path(produto) %></td>
+    <td><%= button_to "Remover", produto, method: :delete, data: { turbo_confirm: "Tem certeza que deseja remover o produto #{produto.nome}?" } %></td>
+  </tr>
+</div>

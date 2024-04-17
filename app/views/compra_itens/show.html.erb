@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @compra_item %>
+
+<div>
+  <%= link_to "Edit this compra item", edit_compra_item_path(@compra_item) %> |
+  <%= link_to "Back to compra items", compra_itens_path %>
+
+  <%= button_to "Destroy this compra item", @compra_item, method: :delete %>
+</div>

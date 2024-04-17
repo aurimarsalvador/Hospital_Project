@@ -1,0 +1,87 @@
+<%= form_with(model: venda) do |f| %>
+  <% if venda.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(venda.errors.count, "erro(s)") %>. Corrija antes de avançar.</h2>
+
+      <ul>
+        <% venda.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form_for @venda do |f| %>
+    <div class="field">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="form-group">
+            <%= f.label :data_saida, style: "display: block" %>
+            <%= f.datetime_field :data_saida %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="form-group">
+            <%= f.label :cliente_id, style: "display: block" %>
+            <%= f.collection_select :cliente_id, @clientes, :id, :nome, { include_blank: true } %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Itens da venda:</h3>
+    <div id='venda_itens'>
+      <%= f.fields_for :venda_itens do |venda_item| %>
+        <%= render 'venda_item_fields',:f => venda_item %>
+      <% end %> 
+      <div class='links'>
+        <%= link_to_add_association 'Adicionar produto', f, :venda_itens, partial: 'venda_item_fields' %>
+      </div>
+    </div>
+
+    <h3>Opções de pagamento</h3>
+
+    <div class="field">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="form-group">
+            <%= f.label :valor_a_vista, style: "display: block" %>
+            <%= f.number_field :valor_a_vista %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="form-group">
+            <%= f.label :intervalo_de_dias_entre_parcelas, style: "display: block" %>
+            <%= f.number_field :dias_intervalo %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="form-group">
+            <%= f.label :numero_de_parcelas, style: "display: block" %>
+            <%= f.number_field :numero_de_parcelas %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <%= f.submit class:"btn btn-primary" %>
+
+  <% end %>
+<% end %>
+

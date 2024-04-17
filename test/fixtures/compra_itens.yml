@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  valor_unitario: 9.99
+  valor_total: 9.99
+  quantidade: 1
+
+two:
+  valor_unitario: 9.99
+  valor_total: 9.99
+  quantidade: 1

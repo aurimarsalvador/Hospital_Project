@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h3>Cadastro de Fornecedores</h3>
+
+<%= link_to "Novo Fornecedor", new_fornecedor_path %>
+
+<table class="table table-bordered table-hover" id="fornecedores">
+  <thead>
+    <tr>
+      <td>Nome</td>
+      <td>CPF/CNPJ</td>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @fornecedores %>
+  </tbody>
+</table>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @titulo_pagar %>
+
+<div>
+  <%= link_to "Edit this titulo pagar", edit_titulo_pagar_path(@titulo_pagar) %> |
+  <%= link_to "Back to titulo pagars", titulos_pagar_path %>
+
+  <%= button_to "Destroy this titulo pagar", @titulo_pagar, method: :delete %>
+</div>
